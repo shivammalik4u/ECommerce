@@ -13,14 +13,14 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
                 <img className='logo' src={logo} alt="logo"></img>
-                <a className="navbar-brand" href="#">Shopper</a>
+                <Link className="navbar-brand" to="/">Shopper</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className={`nav-link ${activePage === "Shop" ? 'active' : ''}`} aria-current="page" to="/shop" onClick={() => setactivePage('Shop')}>Shop</Link>
+                            <Link className={`nav-link ${activePage === "Shop" ? 'active' : ''}`} aria-current="page" to="/" onClick={() => setactivePage('Shop')}>Shop</Link>
                         </li>
                         <li className="nav-item">
                             <Link className={`nav-link ${activePage === "Mens" ? 'active' : ''}`} aria-current="page" to="/mens" onClick={() => setactivePage('Mens')}>Mens</Link>
@@ -29,7 +29,7 @@ function Navbar() {
                             <Link className={`nav-link ${activePage === "Women" ? 'active' : ''}`} aria-current="page" to="/women" onClick={() => setactivePage('Women')}>Women</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className={`nav-link ${activePage === "Kids" ? 'active' : ''}`} aria-current="page" to="/kids" onClick={() => setactivePage('Kids')}>Kids</Link>
+                            <Link className={`nav-link ${activePage === "Kids" ? 'active' : ''}`} aria-current="page" to="/kid" onClick={() => setactivePage('Kids')}>Kids</Link>
                         </li>
                        
                     </ul>
