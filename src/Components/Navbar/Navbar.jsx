@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Navbar.css'
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/cart_icon.png';
 import { Link } from 'react-router-dom';
+import { ShopContext } from '../../Context/ShopContext';
 
 
 function Navbar() {
 
+    const {getTotalCartItems} = useContext(ShopContext);
+    
     const [activePage, setactivePage] = useState('Shop');
 
     return (
@@ -38,7 +41,7 @@ function Navbar() {
                             <Link to='/cart'>
                             <img className="mx-2" src={cart_icon} alt="cart" />
                             <span className="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
-                                0
+                                {getTotalCartItems()}
                                 <span className="visually-hidden">unread messages</span>
                             </span>
                             </Link>
